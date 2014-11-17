@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{kopka2003guide}
+Kopka, H and Daly, PW.
+\newblock \emph{Guide to LATEX}.
+\newblock Pearson Education (2003).
+
+\bibitem{LPSC}
+{Lunar and Planetary Institute}.
+\newblock \emph{Abstract submission instructions}.
+\newblock
+  \url{http://www.hou.usra.edu/meetings/lpsc2014/programAbstracts/instructions/}
+  (2014).
+
+\bibitem{light2004end}
+Light, A and Bartlein, PJ.
+\newblock \emph{Eos, Transactions American Geophysical Union}, 85:385--391
+  (2004).
+
+\bibitem{borland2007rainbow}
+Borland, D and Taylor~II, RM.
+\newblock \emph{IEEE computer graphics and applications}, 27:14--17 (2007).
+
+\bibitem{green2011colour}
+Green, D.
+\newblock \emph{arXiv preprint arXiv:1108.5083} (2011).
+
+\end{thebibliography}
