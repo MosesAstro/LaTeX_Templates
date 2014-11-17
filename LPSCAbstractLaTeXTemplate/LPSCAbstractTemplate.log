@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 NOV 2014 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 NOV 2014 13:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -166,45 +166,45 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 51.
+(Font)              <14.4> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 51.
+(Font)              <7> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 51.
+(Font)              <5> on input line 52.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 86.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 82.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 <lb_fig1.png, id=1, 191.7564pt x 244.2726pt>
 File: lb_fig1.png Graphic file (type png)
  <use lb_fig1.png>
-Package pdftex.def Info: lb_fig1.png used on input line 119.
+Package pdftex.def Info: lb_fig1.png used on input line 102.
 (pdftex.def)             Requested size: 266.01248pt x 338.87447pt.
 
 <rgb-grey-morehue.png, id=3, 716.6775pt x 501.875pt>
 File: rgb-grey-morehue.png Graphic file (type png)
 
 <use rgb-grey-morehue.png>
-Package pdftex.def Info: rgb-grey-morehue.png used on input line 150.
+Package pdftex.def Info: rgb-grey-morehue.png used on input line 127.
 (pdftex.def)             Requested size: 542.025pt x 379.59103pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 \OT1/ptm/m/n/10 Cre-ative Com-mons Attribution-Noncommercial-Share Alike
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 \OT1/pcr/m/n/10 creativecommons . org / licenses / by-[]nc-[]sa / 3 . 0/$\OT1/p
 tm/m/n/10 ;
  []
@@ -217,7 +217,7 @@ Overfull \vbox (6.66112pt too high) has occurred while \output is active []
 
 
  <./lb_fig1.png>]
-Underfull \hbox (badness 2582) in paragraph at lines 187--191
+Underfull \hbox (badness 2582) in paragraph at lines 156--157
  \OT1/ptm/b/n/12 Works that you ref-er-ence \OT1/ptm/m/n/10 Us-ing \OT1/pcr/m/n
 /10 bibtex \OT1/ptm/m/n/10 with the
  []
