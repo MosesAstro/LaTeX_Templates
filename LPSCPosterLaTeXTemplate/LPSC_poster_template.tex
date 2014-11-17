@@ -40,6 +40,9 @@
 % Use the underscore package to make underscores look good.
 %\usepackage{underscore}
 
+% Allow URLs and other references
+\usepackage{hyperref}
+
 % You probably don't need all of these graphics packages,
 % so remove the ones that don't have anything to do with your particular
 % input graphics.
@@ -144,13 +147,13 @@
   \Head{Introduction}
   %\slshape
   \small
-  This template is created to help those who use \LaTeX\ write LPSC posters that look decent, are output as scaleable PDFs, and can be printed by most modern large-format printers with little or no fiddling.
+  I created this template to help those who use \LaTeX\ to write LPSC posters.
   
-  I turned off paragraph indentation. 
-  If you want it back on, look at the preamble and comment out the \verb=\parindent= command. 
-  Also, you can do citations just like normal \cite{kopka2003guide}.
+  I turned off paragraph indentation, but if you want it back on, look at the preamble and comment out the \verb=\parindent= command. 
+    
+  You can always find the most recent version of this template here:\\
+  \url{https://github.com/MosesAstro/LaTeX_Templates}
   
-  Here is some nonsense text to fill in this box.
   \blindtext
   \bigskip
 \end{textblock}
@@ -160,6 +163,7 @@
   %\slshape
   \small
   You use citations and references exactly as you would for any \LaTeX\ publication. 
+  You do citations just like normal \cite{kopka2003guide}.
   Here's our second and third citation \cite{light2004end,borland2007rainbow}. 
   And let's also cite \cite{green2011colour}.
 
