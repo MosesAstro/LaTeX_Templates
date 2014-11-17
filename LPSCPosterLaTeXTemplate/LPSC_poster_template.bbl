@@ -1,0 +1,10 @@
+\begin{thebibliography}{1}\expandafter\ifx\csname
+  selectlanguage\endcsname\relax
+  \def\selectlanguage#1{}\fi\bibitem{kopka2003guide}H.~Kopka and P.~W. Daly.
+  Pearson Education, 2003.\bibitem{light2004end}A.~Light and P.~J. Bartlein,
+  2004, \emph{Eos, Transactions American Geophysical Union}, 85,
+  pp.385--391.\bibitem{borland2007rainbow}D.~Borland and R.~M. Taylor~II, 2007,
+  \emph{IEEE computer graphics and applications}, 27,
+  pp.14--17.\bibitem{green2011colour}D.~Green, 2011, \emph{arXiv preprint
+  arXiv:1108.5083}.
+\end{thebibliography}
