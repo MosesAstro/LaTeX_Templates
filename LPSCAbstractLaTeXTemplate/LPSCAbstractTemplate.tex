@@ -27,7 +27,7 @@
 % These commands are relevant to natbib.  If you don't use
 % natbib for your references, you should get rid of these, as well.
 %\renewcommand{\bibfont}{\small}	% Change the font size of the bibliography
-\renewcommand{\bibsection}{\subsubsection*{\refname}}
+\renewcommand{\bibsection}{\subsubsection*{\hspace{0.5cm}References:}}
 %								% Make the References heading smaller.
 
 % To compress the section titles even more, use the titlesec package.
@@ -69,7 +69,7 @@ $Astrogeology Science Center, U.S. Geological Survey, Flagstaff, AZ 86001 (moses
 
 
 % Using one sentence per line for github tracking purposes.
-\subsection*{Introduction} This template is created to help those who use \LaTeX\ write LPSC abstracts with half-way decent figures, bibliographies, 
+\subsection*{\hspace{0.5cm}Introduction:} This template is created to help those who use \LaTeX\ write LPSC abstracts with half-way decent figures, bibliographies, 
 and the like.
 There used to be a \LaTeX\ template and a style file for writing Lunar and Planetary Science Conference (LPSC) abstracts available
 on the LPSC Web site.
@@ -80,7 +80,7 @@ Fortunately, the requirements for LPSC abstracts \citep{LPSC} are reasonably rel
 The most up-to-date version of this template is always available here:\\
 \url{https://github.com/MosesAstro/LaTeX_Templates}.
 
-\subsection*{Title area}
+\subsection*{\hspace{0.5cm}Title area:}
 The title mechanism for this template is a simple command, \verb=\titlearea=, which takes two arguments, the title text and the author info text.
 
 The title text is made a font size bigger and made boldface in the lpscabs package.  
@@ -93,11 +93,11 @@ So rather than try to program something that can be all things to all people, we
 It is a little less convenient, but we think it is more flexible.
 We have commented out a few multiple author styles up near that section of this source file.
 
-\subsubsection*{Section styles} 
+\subsubsection*{\hspace{0.5cm}Section styles:} 
 In general, people try to put lots of information into their abstracts, and want to minimize the space being taken up by section headers.
 We have redefined the \verb=\section=, \verb=\subsection=, and \verb=\subsubsection= commands so that text does not start on a new line after the section header.
 
-\subsubsection*{Figures}
+\subsubsection*{\hspace{0.5cm}Figures:}
 
 \begin{figure}[b]
 \begin{center}
@@ -135,7 +135,7 @@ This is a \LaTeX\ limitation.
 \end{center}
 \end{figure*}
 
-\subsection*{Copyright Information}
+\subsection*{\hspace{0.5cm}Copyright Information:}
 
 This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 License.
 To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc-sa/3.0/}; or, (b) send a letter to Creative Commons, 171 2nd Street, Suite 300, San Francisco, California, 94105, USA.
@@ -154,8 +154,8 @@ You may even want to check out the Science Commons at \url{http://science.creati
 
 
 \subsection*{Works that you reference}
-
-Using \texttt{bibtex} with the \texttt{inparaenum} option and a new LPSC bibliographystyle approximates the reference-style that has emerged for LPSC abstracts over the years, but there is no hard and fast rule.
+Note that you will not use a \verb=\subsection= heading to start this section, that's taken care of for you.
+Using \texttt{bibtex} with the \texttt{inparaenum} option and the included LPSC bibliographystyle approximates the reference-style that has emerged for LPSC abstracts.
 
 %\begin{flushleft}
 \begin{inparaenum}

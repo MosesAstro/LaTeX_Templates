@@ -22,6 +22,9 @@
 %% Page Style to put numbers at the top.
 \pagestyle{myheadings}
 
+\usepackage[compact]{titlesec}
+
+
 \setlength{\voffset}{-0.5in}
 \setlength{\hoffset}{-0.5in}
 \setlength{\topmargin}{0in}         % = \voffset+1in because LaTeX adds \voffset+1in
@@ -66,24 +69,24 @@
 
 % Make the section labels and text start on the same line.
 \renewcommand\section{\@startsection {section}{1}{\z@}%
-                                   {3.5ex \@plus1ex \@minus.2ex}%
+                                   {-3.5ex \@plus1ex \@minus-2ex}%
                                    {-1em}%
-                                   {\normalfont\Large\bfseries}}
+                                   {\normalfont\normalsize\bfseries}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                     {3.25ex\@plus1ex \@minus.2ex}%
+                                     {-3.25ex\@plus1ex \@minus-2ex}%
                                      {-1em}%
-                                     {\normalfont\large\bfseries}}
+                                     {\normalfont\normalsize\bfseries}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-                                     {3.25ex\@plus1ex \@minus.2ex}%
+                                     {-3.25ex\@plus1ex \@minus-2ex}%
                                      {-1em}%
-                                     {\normalfont\normalsize\bfseries}}                                   
+                                     {\normalfont\normalsize\itshape}}                                   
 %%---------------------------- Commands ----------------
 %%
 %% We need to create some commands that the LPSC template will use
 
 \newcommand{\titlearea}[2]{%
 \thispagestyle{empty}
-\twocolumn[ {\textbf{\Large#1}} #2 ]
+\twocolumn[ {\bfseries \scshape #1} #2 ]
 }
 
 % The LPI doesn't recommend using a running title anymore, but this 
