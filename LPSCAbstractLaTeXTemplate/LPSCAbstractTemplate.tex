@@ -15,7 +15,7 @@
 
 % Use the LaTeX article class.  Pass any options you like to article, except
 % twocolumn.  We take care of that in the lpscabs pacakage below.
-\documentclass[twoside]{article} 
+\documentclass[twoside]{article}
 
 \usepackage{times}				% Nice fonts, optional
 \usepackage{hyperref}                % Needed for wrapping long URLs
@@ -36,7 +36,7 @@
 \usepackage{paralist}			% For compressing bibliography into a paragraph
 
 \usepackage{balance}			% For balancing columns on the page.
-								
+
 \usepackage{lpscabs}			% This is to take care of some LPSC abstract
 								% document-specific things and set sizes.
 
@@ -47,9 +47,9 @@
 % Use \\ \hrule here to put a horizontal rule across both columns
 
 \titlearea{\LaTeX\ LPSC Abstract Template}
-{R.~A.~Beyer$^{\dag}$, M.~P.~Milazzo$^{\star}$ $^{\dag}$NASA Ames Research Center, MS 245-3, Moffett Field, CA, USA (Ross.A.Beyer@nasa.gov) $^{\star}
+{R.~A.~Beyer$^{\dag}$, M.~P.~Milazzo$^{\star}$ $^{\dag}$NASA Ames Research Center, MS 245--3, Moffett Field, CA, USA (Ross.A.Beyer@nasa.gov) $^{\star}
 $Astrogeology Science Center, U.S. Geological Survey, Flagstaff, AZ 86001 (moses@usgs.gov) \\ \hrule
-} 
+}
 
 % Here is an example with just one author:
 %
@@ -65,16 +65,16 @@ $Astrogeology Science Center, U.S. Geological Survey, Flagstaff, AZ 86001 (moses
 % \runningtitle{\LaTeX\ and the LPSC Abstract, R. A. Beyer and M. P. Milazzo}
 
 % Uncomment \usepackage{balance} above to use this:
-\balance
+\balance{}
 
 
 % Using one sentence per line for github tracking purposes.
-\subsection*{\hspace{0.5cm}Introduction:} This template is created to help those who use \LaTeX\ write LPSC abstracts with half-way decent figures, bibliographies, 
+\subsection*{\hspace{0.5cm}Introduction:} This template is created to help those who use \LaTeX\ write LPSC abstracts with half-way decent figures, bibliographies,
 and the like.
 There used to be a \LaTeX\ template and a style file for writing Lunar and Planetary Science Conference (LPSC) abstracts available
 on the LPSC Web site.
 However, in the last decade or so, no such template has been available, and we found ourselves dragging the old one out.
-It was full of scary \TeX\ commands and had a date from 1996 in it, so we decided to start from scratch and write a template based on \LaTeX's own article class and a short \LaTeXe\ package file.  
+It was full of scary \TeX\ commands and had a date from 1996 in it, so we decided to start from scratch and write a template based on \LaTeX's own article class and a short \LaTeXe\ package file.
 Most of the \LaTeX\ work is based on \citep{kopka2003guide}.
 Fortunately, the requirements for LPSC abstracts \citep{LPSC} are reasonably relaxed.
 The most up-to-date version of this template is always available here:\\
@@ -83,7 +83,7 @@ The most up-to-date version of this template is always available here:\\
 \subsection*{\hspace{0.5cm}Title area:}
 The title mechanism for this template is a simple command, \verb=\titlearea=, which takes two arguments, the title text and the author info text.
 
-The title text is made a font size bigger and made boldface in the lpscabs package.  
+The title text is made a font size bigger and made boldface in the lpscabs package.
 If you would like it styled differently, it should be easy to go in to the \texttt{lpscabs.sty} file and change it.
 
 The old style file had a fancy automatic mechanism for entering authors and putting superscripted numbers on their names to match up with their affiliations later on in the title.
@@ -93,7 +93,7 @@ So rather than try to program something that can be all things to all people, we
 It is a little less convenient, but we think it is more flexible.
 We have commented out a few multiple author styles up near that section of this source file.
 
-\subsubsection*{\hspace{0.5cm}Section styles:} 
+\subsubsection*{\hspace{0.5cm}Section styles:}
 In general, people try to put lots of information into their abstracts, and want to minimize the space being taken up by section headers.
 We have redefined the \verb=\section=, \verb=\subsection=, and \verb=\subsubsection= commands so that text does not start on a new line after the section header.
 
@@ -102,8 +102,8 @@ We have redefined the \verb=\section=, \verb=\subsection=, and \verb=\subsubsect
 \begin{figure}[b]
 \begin{center}
 \includegraphics[width=\columnwidth]{lb_fig1.png}
-\caption{ \label{color_scales}
-    This is Figure 1 from \citep{light2004end}. 
+\caption{\label{color_scales}
+    This is Figure 1 from \citep{light2004end}.
     }
 \end{center}
 \end{figure}
@@ -115,12 +115,12 @@ When you make the decision to create a color figure, take some time to think abo
 We think that \citep{light2004end, borland2007rainbow} make a good case for not using the typical rainbow-spectrum color scheme (e.g. Fig.~\ref{color_scales}).
 Don't confuse ``pretty'' with ``meaningful.''
 
-A suggestion by \citep{green2011colour} is that color schemes should be perceived as monotonically increasing when used to display intensity maps of various sorts (such as topography, etc.). 
+A suggestion by \citep{green2011colour} is that color schemes should be perceived as monotonically increasing when used to display intensity maps of various sorts (such as topography, etc.).
 This generally does not happen with most rainbow color schemes.
 A monotonically increasing color scheme also does its job whether printed in color or grayscale.
 See Fig.~\ref{SaturationColors}
 
-If you need tables to be the full width of the page, just use their starred versions, like \verb=\begin{table*}= instead of \verb=\begin{table}=. 
+If you need tables to be the full width of the page, just use their starred versions, like \verb=\begin{table*}= instead of \verb=\begin{table}=.
 However, if you want figures to be the full width and you use the starred version \verb=\begin{figure*}=, then you'll find that the figure is either always at the top of the page or on its own page.
 This is a \LaTeX\ limitation.
 
@@ -128,8 +128,8 @@ This is a \LaTeX\ limitation.
 \begin{center}
 \includegraphics[width=\textwidth]{rgb-grey-morehue.png}
 \caption[CubeHelix Color Schemes]{
-   \label{SaturationColors}
-    Modified from \url{https://www.mrao.cam.ac.uk/~dag/CUBEHELIX}. 
+\label{SaturationColors}
+    Modified from \url{https://www.mrao.cam.ac.uk/~dag/CUBEHELIX}.
     The color and greyscale bars are both increasining in brightness monotonically.
     }
 \end{center}
@@ -138,7 +138,7 @@ This is a \LaTeX\ limitation.
 \subsection*{\hspace{0.5cm}Copyright Information:}
 
 This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 License.
-To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc-sa/3.0/}; or, (b) send a letter to Creative Commons, 171 2nd Street, Suite 300, San Francisco, California, 94105, USA.
+To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc-sa/3.0/}; or, (b) send a letter to Creative Commons, 171 2nd Street, Suite 300, San Francisco, California, 94105, USA\@.
 
 Does this mean that if you write an abstract using this template that you are required by law to credit us and to release the paper under the same kind of Creative Commons license?
 No, it doesn't.
@@ -161,7 +161,7 @@ Using \texttt{bibtex} with the \texttt{inparaenum} option and the included LPSC 
 \begin{inparaenum}
   \bibliographystyle{lpsc}
   \fussy
-  \raggedright
+  \raggedright{}
   \bibliography{templatebibliography}
 \end{inparaenum}
 %\end{flushleft}
@@ -169,4 +169,3 @@ Using \texttt{bibtex} with the \texttt{inparaenum} option and the included LPSC 
 
 
 \end{document}
-
