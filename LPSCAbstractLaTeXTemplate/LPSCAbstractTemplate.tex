@@ -67,7 +67,7 @@
 % will be used as the title, and the second as the author info.
 
 
-\titlearea{Using \LaTeX\ to write an LPSC Abstract.}{Ross A. Beyer$^{1,2}$ and Moses P. Milazzo$^{3}$, $^1$Carl Sagan Center at the SETI Institute, $^2$NASA Ames Research Center, MS 245-3, Moffett Field, CA, USA (\href{mailto:Ross.A.Beyer@nasa.gov}{Ross.A.Beyer@nasa.gov}), and $^3$Astrogeology Science Center, United States Geological Survey (\href{mailto:moses@usgs.gov}{moses@usgs.gov})}
+\titlearea{Using \LaTeX\ to write an LPSC Abstract.}{Ross A. Beyer$^{1,2}$ and Moses P. Milazzo$^{3}$, $^1$Carl Sagan Center at the SETI Institute, $^2$NASA Ames Research Center, MS 245--3, Moffett Field, CA, USA (\href{mailto:Ross.A.Beyer@nasa.gov}{Ross.A.Beyer@nasa.gov}), and $^3$Astrogeology Science Center, United States Geological Survey (\href{mailto:moses@usgs.gov}{moses@usgs.gov})}
 
 % Here is an example with just one author:
 %
@@ -78,7 +78,7 @@
 % \titlearea{Using \LaTeX\ to write an LPSC Abstract.}{Ross A. Beyer$^{1,2}$, John Q. Public$^{a}$, and Jane Doe$^{\dag}$, $^1$Carl Sagan Center at the SETI Institute, $^2$NASA Ames Research Center, MS 245-3, Moffett Field, CA, USA (Ross.A.Beyer@nasa.gov), $^{a}$123 Sesame Street, New York NY, USA, $^{\dag}$890 Somewhere, ID, USA}
 
 % Uncomment \usepackage{balance} above to use this:
-\balance
+\balance{}
 
 \vspace{4cm}
 \section*{Introduction}
@@ -90,7 +90,7 @@ was full of scary \TeX\ commands and had a date from 1996 in it,
 so we decided to start from scratch and write a
 \href{https://github.com/MosesAstro/LaTeX_Templates/tree/master/LPSCAbstractLaTeXTemplate}{template} based
 on \LaTeX's own article class and a short \LaTeXe\ package file.
-Most of the \LaTeX\ work is based on \cite{kopka2003guide}. Fortunately, the 
+Most of the \LaTeX\ work is based on~\cite{kopka2003guide}. Fortunately, the 
 requirements for LPI-sponsored meeting abstracts (like LPSC)
 are reasonably relaxed \citep{LPSC}.
 
@@ -120,9 +120,8 @@ space around titles.
 \begin{figure}[b]
 \begin{center}
 \includegraphics[width=\columnwidth]{lb_fig1.png}
-\caption[Color Scales and Color-Deficient-Viewer Simulations]{
-    \label{color_scales}
-    This is Figure 1 from \cite{light2004end}.}
+\caption[Color Scales and Color-Deficient-Viewer Simulations]{\label{color_scales}
+    This is Figure~1 from~\cite{light2004end}.}
 \end{center}
 \end{figure}
 
@@ -132,7 +131,7 @@ space-limited abstract.
 
 When you make the decision to create a color figure, take some time
 to think about the colors that you use.  We think that a  strong case has 
-been made \citep{light2004end,borland2007rainbow} for not using the
+been made~\citep{light2004end,borland2007rainbow} for not using the
 typical rainbow-spectrum color scheme (e.g. Fig.~\ref{color_scales}).
 Just because you decide to use color doesn't mean that you need to
 use \emph{all} of the colors.  Don't confuse ``pretty'' with
@@ -194,9 +193,9 @@ why we set \verb=citecolor= and \verb=linkcolor= to black.  The
 things in the document, and gives them unique colors.
 However, in this short document, that's visually distracting. 
 The links are there, they're just black. You can click on the references
-numbers, like this one: \citep{kopka2003guide} (which won't do much since
+numbers, like this one:~\citep{kopka2003guide} (which won't do much since
 the references are on this page), or figure numbers like
-this: \ref{color_scales}.
+this:~\ref{color_scales}.
 
 
 \section*{Copyright Information:}
