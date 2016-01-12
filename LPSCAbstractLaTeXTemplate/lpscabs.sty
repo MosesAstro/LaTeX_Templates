@@ -1,11 +1,13 @@
 % This is a LaTeX 2e Class file for creating LPSC abstracts
-% $Id: lpscabs.sty 11 2008-01-31 15:42:07Z rbeyer $
+% $Id: lpscabs.sty 22 2016-01-08 00:28:19Z rbeyer $
+
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{lpscabs}[2005/12/20 LPSC Abstract Class]
 
 % Copyright (C) 2005,2007,2008 Ross A. Beyer
-% Copyright (C) 2014 Moses P. Milazzo
+% and 2014, 2015, 2016 Ross A. Beyer and Moses P. Milazzo
+
 
 % This work is licensed under the Creative Commons
 % Attribution-Noncommercial-Share Alike 3.0 License. To view a copy
@@ -19,78 +21,98 @@
 
 %%---------------------------- Global Settings ------------------------
 
-%% Page Style to put numbers at the top.
-\pagestyle{myheadings}
+%Do not include page numbers.
+\pagestyle{empty}
 
-\usepackage[compact]{titlesec}
-
-
-\setlength{\voffset}{-0.5in}
-\setlength{\hoffset}{-0.5in}
-\setlength{\topmargin}{0in}         % = \voffset+1in because LaTeX adds \voffset+1in
-\setlength{\topskip}{2em}          % This is the spacing above the text.
-
-\setlength{\marginparwidth}{0.5in} % Margin widths
+\setlength{\topmargin}{-0.5in}         % = 1in because LaTeX adds 1in
+\setlength{\topskip}{10pt}          % This is the height of the text.
 
 \setlength{\oddsidemargin}{0in}   	% = 1in because LaTeX adds 1in
 \setlength{\evensidemargin}{0in}    % = 1in because LaTeX adds 1in
 
-\setlength{\columnsep}{1em} %set the column separation. This can be in any units.
+\setlength{\columnsep}{0.33in} % This is the standard separation between the
+						% columns if the column sizes are balanced.
 
-\setlength{\textheight}{9in}
-\setlength{\textwidth}{7.5in}
-
-\setlength{\headheight}{0pt} % We're not using running heads anymore, so remove it.
-\setlength{\headsep}{0pt}
-
-\setlength{\footskip}{0pt} % Also, we're not using footers on this page. Remove them.
+\setlength{\textheight}{9in}		% LPI's template calls for 1-inch margins on all sides.
+\setlength{\textwidth}{6.5in}
 
 % Alter some LaTeX defaults for better treatment of figures:
 % See p.105 of "TeX Unbound" for suggested values.
 % See pp. 199-200 of Lamport's "LaTeX" book for details.
 %   General parameters, for ALL pages:
-\renewcommand{\topfraction}{1}    % max fraction of floats at top
-\renewcommand{\bottomfraction}{1} % max fraction of floats at bottom
+\renewcommand{\topfraction}{0.9}    % max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8} % max fraction of floats at bottom
 %   Parameters for TEXT pages (not float pages):
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
-\setcounter{totalnumber}{2}     % 2 may work better
-\setcounter{dbltopnumber}{10}    % for 2-column pages
-\renewcommand{\dbltopfraction}{1} % fit big float above 2-col. text; we want to be generous here
-                                                          % so that the LPSC abstract can hold a wide figures.
-\renewcommand{\textfraction}{0}  % allow minimal text w. figs
+\setcounter{totalnumber}{4}     % 2 may work better
+\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9} % fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}  % allow minimal text w. figs
 %   Parameters for FLOAT pages (not text pages):
 \renewcommand{\floatpagefraction}{0.9}      % require fuller float pages
 % N.B.: floatpagefraction MUST be less than topfraction !!
 \renewcommand{\dblfloatpagefraction}{0.99}   % require fuller float pages
 
-% Turn off page numbering.
-\pagenumbering{gobble}
-
-% Make the section labels and text start on the same line.
-\renewcommand\section{\@startsection {section}{1}{\z@}%
-                                   {-3.5ex \@plus1ex \@minus-2ex}%
-                                   {-1em}%
-                                   {\normalfont\normalsize\bfseries}}
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                     {-3.25ex\@plus1ex \@minus-2ex}%
-                                     {-1em}%
-                                     {\normalfont\normalsize\bfseries}}
-\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-                                     {-3.25ex\@plus1ex \@minus-2ex}%
-                                     {-1em}%
-                                     {\normalfont\normalsize\itshape}}                                   
 %%---------------------------- Commands ----------------
 %%
 %% We need to create some commands that the LPSC template will use
 
 \newcommand{\titlearea}[2]{%
 \thispagestyle{empty}
-\twocolumn[ {\bfseries \scshape #1} #2 ]
+\twocolumn[ \textbf{{\sc #1}} #2 \vspace{1em} ]
 }
 
-% The LPI doesn't recommend using a running title anymore, but this 
-% command is left in for historical reasons.
-%\newcommand{\runningtitle}[1]{%
-%\markboth{#1}{#1}
-%}
+
+% Make the section labels and text start on the same line. 
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                   {-2.25ex \@plus.2ex \@minus-.2ex}%
+                                   {-1em \@plus.1ex}%
+                                    {\normalfont\normalsize\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-2.25ex\@plus1ex \@minus-.2ex}%
+                                     {-1em}%
+                                     {\normalfont\normalsize\bfseries\textit}}
+
+\newdimen\bibmarginindent
+
+% We need to redefine the bibliography environment so that the
+% left margin of the paragraph is 
+\renewenvironment{thebibliography}[1]
+     {\section*{\refname:}%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+          {\settowidth\labelwidth{\@biblabel{#1}}%
+      	    \setlength\leftmargin{\bibmarginindent}
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+
+% Create two new commands for ease-of-use of
+% bibliography formats.
+% \parabib creates a single-paragraph bibliography.
+\newcommand{\parabib}[2]{%
+	\setlength\bibmarginindent{0in}
+	\begin{flushleft}
+		\begin{inparaenum}
+			\bibliography{#1}
+			\bibliographystyle{#2}
+		\end{inparaenum}
+	\end{flushleft}
+	}
+
+%\listbib creates a one-item-per-line bibliography.	
+\newcommand{\listbib}[3]{%
+	\setlength\bibmarginindent{#3}
+		\bibliography{#1}
+		\bibliographystyle{#2}
+	}
