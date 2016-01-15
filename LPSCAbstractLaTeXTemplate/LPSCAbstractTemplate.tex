@@ -33,30 +33,28 @@
 
 \usepackage{balance}			% For balancing columns on the page. Note that to use this, you must also uncomment the balance command below.
 
-\usepackage{lpscabs}			% This is to take care of some LPSC abstract
-								% document-specific things and set sizes.					
-
 \usepackage[super]{nth}			% This provides simple commands to deal with superscripts on numbers. Totally optional.
 
 \usepackage{paralist}			% For compressing bibliography into a paragraph; Required if using the \parabib bibliography command
 
-%\usepackage[margin=1in]{geometry}	% Set all page margins to 1-inch. This is not yet settled. Will need to test it vs setting 
+\usepackage[margin=1in]{geometry}	% Set all page margins to 1-inch. This is not yet settled. Will need to test it vs setting 
 					% these in the style file.
 
 % To compress the section titles even more, use the titlesec package.
-\usepackage[tiny,compact]{titlesec}
+%\usepackage[tiny,compact]{titlesec}
 
-\titlespacing*{\section} {0.20in}{1.5ex plus .5ex minus .2ex}{1.3ex plus .2ex} % This indents the section titles by 0.0in and defines the 
+
+\usepackage{lpscabs}			% This is to take care of some LPSC abstract
+								% document-specific things and set sizes.																			
+\setlength{\bibmarginindent}{0.2in}	% This sets the indentation level of the itemization of the bibliography items if the \biblist 
+							% bibliography option is used for the bibliography. Otherwise it's ignored. At 0.2in, the items
+							% line up with the column margins.
+%\titlespacing*{\section} {0.40in}{1.5ex plus .5ex minus .2ex}{1.3ex plus .2ex} % This indents the section titles by 0.0in and defines the 
         														% spacing above and below the sections. If you want 
 														% deeper indentation, increase the value of the first argument.
 														% If you want different vertical spacing, muck with the second
 														% argument. The third defines the relationship between the
-														% section titles and the paragraph that comes after.
-																	
-\setlength{\bibmarginindent}{0.2in}	% This sets the indentation level of the itemization of the bibliography items if the \biblist 
-							% bibliography option is used for the bibliography. Otherwise it's ignored. At 0.2in, the items
-							% line up with the column margins.
-
+														% section titles and the paragraph that comes after.			
 
 \begin{document}
 
@@ -78,7 +76,7 @@
 \balance{}
 
 \vspace{4cm}
-\section*{Introduction}
+\section*{Introduction:}
 There used to be a \LaTeX\ template and a style file for writing
 Lunar and Planetary Science Conference (LPSC) abstracts available
 on the LPSC Web site.  However, no such template has been available
@@ -101,7 +99,7 @@ one that works for you. The title text is made using {\sc Smallcaps} similarly t
 template.  If you would like a different style, it should be easy to go in to 
 the \texttt{lpscabs.sty} file and change it.
 
-\section*{Section styles:}
+\subsection*{Section styles:} % Using subsections.
 
 In general, people try to put lots of information into their LPSC
 abstracts, and want to minimize the space being taken up by section
@@ -194,8 +192,7 @@ numbers, like this one:~\citep{kopka2003guide} (which won't do much since
 the references are on this page), or figure numbers like
 this:~\ref{color_scales}.
 
-
-\section*{Copyright Information:}
+\section*{Copyright:}
 
 This work is licensed under the Creative Commons
 Attribution-Noncommercial-Share Alike License. To view a copy
@@ -216,7 +213,6 @@ request that derivative templates credit us, but also allow for
 rights and restrictions.  If you want to know more, visit the
 Creative Commons web site at \href{https://creativecommons.org/science/}{http://creativecommons.org/science}.
 
-
 \section*{Works that you reference:}
 
 Using \texttt{natbib} with the \texttt{numbers} option and the included
@@ -228,11 +224,10 @@ close approximation to the LPI template bibliography style.
 of the references into a single paragraph. \verb=\listbib= is designed to 
 provide a cleaner-looking, but less space-efficient bibliography.
 
-
 % Use \parabib if you want to have all references in a single paragraph.
 \parabib{templatebibliography}{lpsc}
 
 % If, instead, you want each of your references on a separate line, use \listbib.
-%\listbib{/Volumes/Work/Documents/LaTeX/Bibliography/bibliography}{lpsc}{\bibmarginindent}
+%\listbib{templatebibliography}{lpsc}
 
 \end{document}

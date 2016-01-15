@@ -23,17 +23,17 @@
 %Do not include page numbers.
 \pagestyle{empty}
 
-\setlength{\topmargin}{-0.5in}         % = 1in because LaTeX adds 1in
-\setlength{\topskip}{10pt}          % This is the height of the text.
-
-\setlength{\oddsidemargin}{0in}   	% = 1in because LaTeX adds 1in
-\setlength{\evensidemargin}{0in}    % = 1in because LaTeX adds 1in
-
+%\setlength{\topmargin}{-0.5in}         % = 1in because LaTeX adds 1in
+%\setlength{\topskip}{10pt}          % This is the height of the text.
+%
+%\setlength{\oddsidemargin}{0in}   	% = 1in because LaTeX adds 1in
+%\setlength{\evensidemargin}{0in}    % = 1in because LaTeX adds 1in
+%
 \setlength{\columnsep}{0.33in} % This is the standard separation between the
-						% columns if the column sizes are balanced.
-
-\setlength{\textheight}{9in}		% LPI's template calls for 1-inch margins on all sides.
-\setlength{\textwidth}{6.5in}
+%						% columns if the column sizes are balanced.
+%
+%\setlength{\textheight}{9in}		% LPI's template calls for 1-inch margins on all sides.
+%\setlength{\textwidth}{6.5in}
 
 % Alter some LaTeX defaults for better treatment of figures:
 % See p.105 of "TeX Unbound" for suggested values.
@@ -65,13 +65,13 @@
 
 % Make the section labels and text start on the same line. 
 \renewcommand\section{\@startsection{section}{1}{\z@}%
-                                   {-2.25ex \@plus.2ex \@minus-.2ex}%
+                                   {-0.5ex \@plus0.5ex \@minus-.1ex}%
                                    {-1em \@plus.1ex}%
-                                    {\normalfont\normalsize\bfseries}}
+                                    {\normalfont\normalsize\bfseries\hspace{0.2in}}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                     {-2.25ex\@plus1ex \@minus-.2ex}%
+                                     {-0.5ex\@plus0.5ex \@minus-.1ex}%
                                      {-1em}%
-                                     {\normalfont\normalsize\textit}}
+                                     {\normalfont\normalsize\itshape\hspace{0.2in}}}
 
 \newdimen\bibmarginindent
 
@@ -110,8 +110,8 @@
 	}
 
 %\listbib creates a one-item-per-line bibliography.	
-\newcommand{\listbib}[3]{%
-	\setlength\bibmarginindent{#3}
+\newcommand{\listbib}[2]{%
+	\setlength\bibmarginindent{\bibmarginindent}
 		\bibliography{#1}
 		\bibliographystyle{#2}
 	}
